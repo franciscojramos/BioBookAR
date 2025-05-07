@@ -54,8 +54,9 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
 
 ---
 
-## 🗂️ Estructura de carpetas del Proyecto
+## 🗂️ Estructura del Proyecto
 
+```plaintext
 BioBookAR/
 ├── main.py                            # Punto de entrada principal
 │
