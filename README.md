@@ -2,7 +2,7 @@
 
 **BioBookAR** es una aplicación educativa interactiva desarrollada como proyecto académico para la asignatura de **CUIA** (Curso de Interfaces de Usuario Avanzadas) en la **Universidad de Granada, España**.  
 
-Diseñada por **Francisco José Ramos Moya**, estudiante del **Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas (ADE)**,para la asignatura de **CUIA** esta aplicación ofrece una experiencia innovadora para el aprendizaje del cuerpo humano mediante el uso de tecnologías como realidad aumentada, reconocimiento facial, y procesamiento de lenguaje natural.
+Diseñada por **Francisco José Ramos Moya**, estudiante del **Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas (ADE)**,esta aplicación ofrece una experiencia innovadora para el aprendizaje del cuerpo humano mediante el uso de tecnologías como realidad aumentada, reconocimiento facial, y procesamiento de lenguaje natural.
 
 ---
 
@@ -27,7 +27,8 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
   - Lista de alumnos y sus estadísticas
   - Edición de preguntas de test por tema
   - Visualización del rendimiento global de la clase
-  - Opción para cambiar el idioma (Español/Inglés)
+  - Cambio de idioma (ES/EN), que se guarda como preferencia en la base de datos.
+
 
 ### 👨‍🎓 Alumnos
 
@@ -37,7 +38,8 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
   - “Mis notas”: ver notas por tema, intentos, mejor nota y media
   - “Realizar test”: responder tests por voz, repetirlos según disponibilidad
   - “Iniciar AR”: escanear marcadores ARUCO y ver videos educativos
-  - Cambio de idioma (ES/EN)
+  - Cambio de idioma (ES/EN), que se guarda como preferencia en la base de datos.
+
 
 ---
 
@@ -45,12 +47,14 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
 
 - **Python 3.10+**
 - **Tkinter** – Interfaz gráfica
-- **OpenCV** + `face_recognition` – Reconocimiento facial
+- **OpenCV** + `face_recognition` – Reconocimiento facial (usando vectores codificados, no imágenes)
 - **OpenCV** + ARUCO – Realidad aumentada con marcadores
 - **SQLite3** – Base de datos local
 - **SpeechRecognition**, `transformers` o `nltk` – Procesamiento de voz/NLP
 - **Pillow** – Visualización de imágenes
 - **JSON** – Almacenamiento de tests y configuración
+- **pickle / json** – Serialización de vectores de rostros
+
 
 ---
 
@@ -79,7 +83,6 @@ BioBookAR/
 │   └── preguntas.json                 # Preguntas clasificadas por tema (editable por profesor)
 │
 ├── recursos/                          # Recursos multimedia y de usuarios
-│   ├── alumnos/                       # Imágenes de rostros capturados
 │   ├── videos/                        # Videos didácticos vinculados a marcadores ARUCO
 │   └── logo.png                       # Imagen para pantalla de inicio
 │
@@ -90,14 +93,16 @@ BioBookAR/
 ## 🧾 Estructura de la Base de Datos
 
 ### Tabla `usuarios`
-| Campo         | Tipo       | Descripción                          |
-|---------------|------------|--------------------------------------|
-| id            | INTEGER    | ID del usuario                       |
-| nombre        | TEXT       | Nombre completo                      |
-| usuario       | TEXT       | Nombre de usuario                    |
-| contraseña    | TEXT       | Contraseña en texto plano o hash     |
-| rol           | TEXT       | 'alumno' o 'profesor'                |
-| imagen_path   | TEXT       | Ruta a la imagen facial              |
+| Campo         | Tipo       | Descripción                                         |
+|---------------|------------|-----------------------------------------------------|
+| id            | INTEGER    | ID del usuario                                      |
+| nombre        | TEXT       | Nombre completo                                     |
+| usuario       | TEXT       | Nombre de usuario                                   |
+| contraseña    | TEXT       | Contraseña en texto plano o hash                    |
+| rol           | TEXT       | 'alumno' o 'profesor'                               |
+| encoding      | BLOB       | Vector codificado del rostro (no imagen)            |
+| idioma        | TEXT       | Preferencia de idioma del usuario ('es', 'en')      |
+
 
 ### Tabla `resultados`
 | Campo         | Tipo       | Descripción                          |
@@ -141,23 +146,27 @@ BioBookAR/
 ## 🌍 Gestión de Idiomas
 
 - La interfaz puede cambiarse entre **Español** e **Inglés**.
-- Esta opción está disponible tanto para alumnos como para el profesor desde sus respectivos menús.
-- Se puede guardar como preferencia del usuario si se desea.
+- Esta preferencia se guarda en la base de datos por usuario.
+- Al iniciar sesión, la app carga el idioma seleccionado previamente.
+- El usuario puede cambiar el idioma manualmente en cualquier momento, y se actualizará la base.
 
 ---
+
+## 🔐 Inicio de Sesión y Registro
 
 ## 🔐 Inicio de Sesión y Registro
 
 ### Métodos de acceso:
 - Usuario + contraseña
 - Reconocimiento facial con `face_recognition`
-  - Si falla, muestra mensaje: `"Reconocimiento facial fallido"` y permite acceso manual
+- Si falla, muestra mensaje: `"Reconocimiento facial fallido"` y permite acceso manual
 
 ### Registro de nuevo usuario:
 - Captura facial con webcam
-- Datos guardados:
-  - Imagen en `recursos/alumnos/`
-  - Información en base de datos SQLite (`usuarios`)
+- La imagen se convierte en un **vector facial codificado (encoding)**
+- Ese vector se serializa y se guarda en la base de datos
+- **No se almacena ninguna imagen del rostro**
+
 
 ---
 
