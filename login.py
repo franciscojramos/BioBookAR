@@ -1,28 +1,86 @@
 import tkinter as tk
 from tkinter import messagebox
+from PIL import Image, ImageTk
 from base_datos import db
 from reconocimiento import facial
 
-# Llamamos a crear tablas si aún no existen
 db.crear_tablas()
 
 class LoginApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("BioBookAR - Login")
-        self.root.geometry("800x600")
+        self.root.title("BioBookAR")
+        self.root.geometry("400x300")
+        self.root.configure(bg="white")  # Fondo blanco
 
-        tk.Label(root, text="Usuario").pack()
-        self.usuario_entry = tk.Entry(root)
+        # Cargar logo y colocarlo en esquina superior izquierda
+        logo_path = "recursos/logof2.png"  # Asegúrate de tenerlo como .png
+        image = Image.open(logo_path).resize((60, 60))
+        self.logo_tk = ImageTk.PhotoImage(image)
+        self.logo_label = tk.Label(self.root, image=self.logo_tk, bg="white", borderwidth=0)
+        self.logo_label.place(x=10, y=10)
+
+        # Inicializa la pantalla principal
+        self.frame_actual = None
+        self.mostrar_pantalla_inicio()
+
+    def limpiar_frame(self):
+        if self.frame_actual:
+            self.frame_actual.destroy()
+
+    def mostrar_pantalla_inicio(self):
+        self.limpiar_frame()
+        self.frame_actual = tk.Frame(self.root, bg="white")
+        self.frame_actual.pack(expand=True)
+
+        tk.Label(self.frame_actual, text="Bienvenido a BioBookAR", font=("Helvetica", 14, "bold"), bg="white").pack(pady=20)
+        tk.Button(self.frame_actual, text="Iniciar sesión", width=20, bg="#4CAF50", fg="white",
+                  command=self.mostrar_login).pack(pady=10)
+        tk.Button(self.frame_actual, text="Crear nuevo usuario", width=20, bg="#2196F3", fg="white",
+                  command=self.mostrar_registro).pack(pady=10)
+
+    def mostrar_login(self):
+        self.limpiar_frame()
+        self.frame_actual = tk.Frame(self.root, bg="white")
+        self.frame_actual.pack(expand=True)
+
+        tk.Label(self.frame_actual, text="Usuario", bg="white").pack()
+        self.usuario_entry = tk.Entry(self.frame_actual)
         self.usuario_entry.pack()
 
-        tk.Label(root, text="Contraseña").pack()
-        self.contraseña_entry = tk.Entry(root, show="*")
+        tk.Label(self.frame_actual, text="Contraseña", bg="white").pack()
+        self.contraseña_entry = tk.Entry(self.frame_actual, show="*")
         self.contraseña_entry.pack()
 
-        tk.Button(root, text="Iniciar sesión", command=self.login_manual).pack(pady=5)
-        tk.Button(root, text="Iniciar con rostro", command=self.login_facial).pack(pady=5)
-        tk.Button(root, text="Registrar nuevo alumno", command=self.registrar_usuario).pack(pady=5)
+        tk.Button(self.frame_actual, text="Iniciar sesión", bg="#4CAF50", fg="white",
+                  command=self.login_manual).pack(pady=5)
+        tk.Button(self.frame_actual, text="Iniciar con rostro", command=self.login_facial).pack(pady=5)
+        tk.Button(self.frame_actual, text="← Volver", command=self.mostrar_pantalla_inicio).pack(pady=10)
+
+    def mostrar_registro(self):
+        self.limpiar_frame()
+        self.frame_actual = tk.Frame(self.root, bg="white")
+        self.frame_actual.pack(expand=True)
+
+        tk.Label(self.frame_actual, text="Nombre completo", bg="white").pack()
+        self.nombre_entry = tk.Entry(self.frame_actual)
+        self.nombre_entry.pack()
+
+        tk.Label(self.frame_actual, text="Usuario", bg="white").pack()
+        self.usuario_reg = tk.Entry(self.frame_actual)
+        self.usuario_reg.pack()
+
+        tk.Label(self.frame_actual, text="Contraseña", bg="white").pack()
+        self.contraseña_reg = tk.Entry(self.frame_actual, show="*")
+        self.contraseña_reg.pack()
+
+        tk.Label(self.frame_actual, text="Idioma preferido", bg="white").pack()
+        self.idioma_var = tk.StringVar(value="es")
+        tk.OptionMenu(self.frame_actual, self.idioma_var, "es", "en").pack()
+
+        tk.Button(self.frame_actual, text="Registrar", bg="#2196F3", fg="white",
+                  command=self.registrar_usuario).pack(pady=10)
+        tk.Button(self.frame_actual, text="← Volver", command=self.mostrar_pantalla_inicio).pack(pady=5)
 
     def login_manual(self):
         usuario = self.usuario_entry.get()
@@ -31,12 +89,12 @@ class LoginApp:
         if user:
             self.redirigir_por_rol(user)
         else:
-            messagebox.showerror("Error", "Credenciales incorrectas")
+            messagebox.showerror("Error", "Credenciales incorrectas", parent=self.root)
 
     def login_facial(self):
         encoding_nuevo = facial.capturar_y_codificar_rostro()
         if encoding_nuevo is None:
-            messagebox.showwarning("Rostro no detectado", "No se detectó exactamente un rostro")
+            messagebox.showwarning("Rostro no detectado", "No se detectó exactamente un rostro", parent=self.root)
             return
 
         encodings_guardados = db.obtener_todos_los_encodings()
@@ -46,37 +104,25 @@ class LoginApp:
             user = self.obtener_usuario_por_id(usuario_id)
             self.redirigir_por_rol(user)
         else:
-            messagebox.showwarning("Error", "Reconocimiento facial fallido. Intente con usuario y contraseña.")
+            messagebox.showwarning("Error", "Reconocimiento facial fallido. Intente con usuario y contraseña.", parent=self.root)
 
     def registrar_usuario(self):
-        ventana = tk.Toplevel(self.root)
-        ventana.title("Registro de Alumno")
+        nombre = self.nombre_entry.get()
+        usuario = self.usuario_reg.get()
+        contraseña = self.contraseña_reg.get()
+        idioma = self.idioma_var.get()
 
-        tk.Label(ventana, text="Nombre").pack()
-        nombre = tk.Entry(ventana)
-        nombre.pack()
+        encoding = facial.capturar_y_codificar_rostro()
+        if encoding is None:
+            messagebox.showwarning("Error", "No se detectó un rostro válido", parent=self.root)
+            return
 
-        tk.Label(ventana, text="Usuario").pack()
-        usuario = tk.Entry(ventana)
-        usuario.pack()
-
-        tk.Label(ventana, text="Contraseña").pack()
-        contraseña = tk.Entry(ventana, show="*")
-        contraseña.pack()
-
-        def registrar():
-            encoding = facial.capturar_y_codificar_rostro()
-            if encoding is None:
-                messagebox.showwarning("Error", "No se detectó un rostro válido")
-                return
-            exito = db.insertar_usuario(nombre.get(), usuario.get(), contraseña.get(), "alumno", encoding)
-            if exito:
-                messagebox.showinfo("Éxito", "Alumno registrado correctamente")
-                ventana.destroy()
-            else:
-                messagebox.showerror("Error", "Ese nombre de usuario ya existe")
-
-        tk.Button(ventana, text="Registrar", command=registrar).pack(pady=5)
+        exito = db.insertar_usuario(nombre, usuario, contraseña, "alumno", encoding, idioma)
+        if exito:
+            messagebox.showinfo("Éxito", "Usuario registrado correctamente", parent=self.root)
+            self.mostrar_pantalla_inicio()
+        else:
+            messagebox.showerror("Error", "Ese nombre de usuario ya existe", parent=self.root)
 
     def obtener_usuario_por_id(self, usuario_id):
         conn = db.conectar()
@@ -89,18 +135,12 @@ class LoginApp:
     def redirigir_por_rol(self, user):
         rol = user[4]
         nombre = user[1]
-        messagebox.showinfo("Bienvenido", f"Hola, {nombre} ({rol})")
-        # Aquí podrías hacer: import alumno o profesor y abrir su ventana
-        # Ejemplo:
-        # if rol == "alumno":
-        #     import gui.alumno as alumno
-        #     alumno.abrir_ventana(user)
-        # elif rol == "profesor":
-        #     import gui.profesor as profesor
-        #     profesor.abrir_ventana(user)
+        messagebox.showinfo("Bienvenido", f"Hola, {nombre} ({rol})", parent=self.root)
         self.root.destroy()
+        # Aquí se redirigiría a gui.alumno o gui.profesor
 
 if __name__ == "__main__":
     root = tk.Tk()
     app = LoginApp(root)
     root.mainloop()
+
