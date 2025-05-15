@@ -24,6 +24,17 @@ def crear_tablas():
         idioma TEXT DEFAULT 'es'
     );
     ''')
+
+    # Tabla para registrar qué temas ha visto el alumno mediante AR
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS temas_vistos (
+        usuario_id INTEGER,
+        tema INTEGER,
+        PRIMARY KEY (usuario_id, tema),
+        FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
+    );
+    ''')
+
     
     # Tabla de resultados por tema
     cursor.execute('''
@@ -95,3 +106,58 @@ def obtener_idioma_usuario(usuario_id):
     idioma = cursor.fetchone()
     conn.close()
     return idioma[0] if idioma else 'es'
+
+
+def marcar_tema_como_visto(usuario_id, tema):
+    """Marca un tema como 'visto' por un usuario (tras escanear AR)."""
+    conn = conectar()
+    cursor = conn.cursor()
+    try:
+        cursor.execute('''
+            INSERT OR IGNORE INTO temas_vistos (usuario_id, tema)
+            VALUES (?, ?)
+        ''', (usuario_id, tema))
+        conn.commit()
+    finally:
+        conn.close()
+
+def obtener_temas_vistos(usuario_id):
+    """Devuelve una lista de números de tema que el usuario ya ha visto con AR."""
+    conn = conectar()
+    cursor = conn.cursor()
+    cursor.execute('''
+        SELECT tema FROM temas_vistos WHERE usuario_id = ?
+    ''', (usuario_id,))
+    resultados = cursor.fetchall()
+    conn.close()
+    return [fila[0] for fila in resultados]
+
+def guardar_resultado(usuario_id, tema, nota):
+    """Guarda o actualiza la nota e incrementa el número de intentos."""
+    conn = conectar()
+    cursor = conn.cursor()
+    
+    # Ver si ya existe entrada para este usuario y tema
+    cursor.execute('''
+        SELECT nota, intentos FROM resultados
+        WHERE usuario_id = ? AND tema = ?
+    ''', (usuario_id, f"Tema {tema}"))
+    
+    existente = cursor.fetchone()
+
+    if existente:
+        mejor_nota = max(nota, existente[0])
+        nuevos_intentos = existente[1] + 1
+        cursor.execute('''
+            UPDATE resultados
+            SET nota = ?, intentos = ?
+            WHERE usuario_id = ? AND tema = ?
+        ''', (mejor_nota, nuevos_intentos, usuario_id, f"Tema {tema}"))
+    else:
+        cursor.execute('''
+            INSERT INTO resultados (usuario_id, tema, nota, intentos)
+            VALUES (?, ?, ?, ?)
+        ''', (usuario_id, f"Tema {tema}", nota, 1))
+
+    conn.commit()
+    conn.close()

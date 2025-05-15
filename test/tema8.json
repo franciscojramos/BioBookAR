@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal del sistema urinario?",
+      "en": "What is the main function of the urinary system?"
+    },
+    "a": {"es": "Transportar oxígeno", "en": "Transport oxygen"},
+    "b": {"es": "Filtrar sangre y eliminar desechos", "en": "Filter blood and remove waste"},
+    "c": {"es": "Digestionar alimentos", "en": "Digest food"},
+    "d": {"es": "Bombear sangre", "en": "Pump blood"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué órgano filtra la sangre y produce la orina?",
+      "en": "Which organ filters blood and produces urine?"
+    },
+    "a": {"es": "Hígado", "en": "Liver"},
+    "b": {"es": "Estómago", "en": "Stomach"},
+    "c": {"es": "Riñón", "en": "Kidney"},
+    "d": {"es": "Pulmón", "en": "Lung"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuántos riñones tiene el cuerpo humano normalmente?",
+      "en": "How many kidneys does the human body normally have?"
+    },
+    "a": {"es": "Uno", "en": "One"},
+    "b": {"es": "Dos", "en": "Two"},
+    "c": {"es": "Tres", "en": "Three"},
+    "d": {"es": "Cuatro", "en": "Four"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué órgano almacena la orina hasta eliminarla?",
+      "en": "Which organ stores urine until it is eliminated?"
+    },
+    "a": {"es": "Riñón", "en": "Kidney"},
+    "b": {"es": "Uréter", "en": "Ureter"},
+    "c": {"es": "Vejiga", "en": "Bladder"},
+    "d": {"es": "Uretra", "en": "Urethra"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Por dónde sale la orina del cuerpo?",
+      "en": "Through which part does urine exit the body?"
+    },
+    "a": {"es": "Uréter", "en": "Ureter"},
+    "b": {"es": "Uretra", "en": "Urethra"},
+    "c": {"es": "Vena", "en": "Vein"},
+    "d": {"es": "Arteria", "en": "Artery"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué son los cálculos renales?",
+      "en": "What are kidney stones?"
+    },
+    "a": {"es": "Piedras formadas en los riñones", "en": "Stones formed in the kidneys"},
+    "b": {"es": "Tumores del hígado", "en": "Liver tumors"},
+    "c": {"es": "Infecciones del estómago", "en": "Stomach infections"},
+    "d": {"es": "Bacterias en los pulmones", "en": "Bacteria in the lungs"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué causa una infección urinaria?",
+      "en": "What causes a urinary infection?"
+    },
+    "a": {"es": "Virus del corazón", "en": "Heart virus"},
+    "b": {"es": "Bacterias", "en": "Bacteria"},
+    "c": {"es": "Gases", "en": "Gas"},
+    "d": {"es": "Fracturas", "en": "Fractures"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué ayuda a cuidar los riñones?",
+      "en": "What helps take care of the kidneys?"
+    },
+    "a": {"es": "Beber suficiente agua", "en": "Drink enough water"},
+    "b": {"es": "Comer mucha sal", "en": "Eat a lot of salt"},
+    "c": {"es": "Aguantarse las ganas de orinar", "en": "Hold in the urge to urinate"},
+    "d": {"es": "Tomar muchos refrescos", "en": "Drink lots of sodas"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cada cuánto filtran los riñones toda la sangre del cuerpo?",
+      "en": "How often do the kidneys filter all the blood in the body?"
+    },
+    "a": {"es": "Cada 30 minutos", "en": "Every 30 minutes"},
+    "b": {"es": "Cada hora", "en": "Every hour"},
+    "c": {"es": "Cada 10 minutos", "en": "Every 10 minutes"},
+    "d": {"es": "Cada 5 minutos", "en": "Every 5 minutes"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué forma tienen los riñones?",
+      "en": "What shape do the kidneys have?"
+    },
+    "a": {"es": "Corazón", "en": "Heart"},
+    "b": {"es": "Frijol", "en": "Bean"},
+    "c": {"es": "Triángulo", "en": "Triangle"},
+    "d": {"es": "Redonda", "en": "Round"},
+    "respuesta": "b"
+  }
+]

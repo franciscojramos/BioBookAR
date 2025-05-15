@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal del estómago?",
+      "en": "What is the main function of the stomach?"
+    },
+    "a": {"es": "Bombear sangre", "en": "Pump blood"},
+    "b": {"es": "Producir oxígeno", "en": "Produce oxygen"},
+    "c": {"es": "Descomponer los alimentos", "en": "Break down food"},
+    "d": {"es": "Controlar el equilibrio", "en": "Control balance"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Dónde se encuentra el estómago?",
+      "en": "Where is the stomach located?"
+    },
+    "a": {"es": "En el pecho", "en": "In the chest"},
+    "b": {"es": "En el cerebro", "en": "In the brain"},
+    "c": {"es": "En la parte superior del abdomen", "en": "In the upper abdomen"},
+    "d": {"es": "En las piernas", "en": "In the legs"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué sustancia produce el estómago para digerir los alimentos?",
+      "en": "What substance does the stomach produce to digest food?"
+    },
+    "a": {"es": "Bilis", "en": "Bile"},
+    "b": {"es": "Ácido clorhídrico", "en": "Hydrochloric acid"},
+    "c": {"es": "Glucosa", "en": "Glucose"},
+    "d": {"es": "Oxígeno", "en": "Oxygen"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cómo se llama la mezcla semilíquida que forma el estómago?",
+      "en": "What is the semi-liquid mixture formed in the stomach called?"
+    },
+    "a": {"es": "Quimo", "en": "Chyme"},
+    "b": {"es": "Sangre", "en": "Blood"},
+    "c": {"es": "Saliva", "en": "Saliva"},
+    "d": {"es": "Orina", "en": "Urine"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué protege al estómago de su propio ácido?",
+      "en": "What protects the stomach from its own acid?"
+    },
+    "a": {"es": "Los músculos", "en": "The muscles"},
+    "b": {"es": "La saliva", "en": "Saliva"},
+    "c": {"es": "Una capa de moco", "en": "A layer of mucus"},
+    "d": {"es": "La bilis", "en": "Bile"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué ocurre después de que el estómago descompone los alimentos?",
+      "en": "What happens after the stomach breaks down food?"
+    },
+    "a": {"es": "Se eliminan del cuerpo", "en": "They are eliminated from the body"},
+    "b": {"es": "Se almacenan en el hígado", "en": "They are stored in the liver"},
+    "c": {"es": "Se envían al intestino delgado", "en": "They are sent to the small intestine"},
+    "d": {"es": "Se transforman en agua", "en": "They turn into water"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué enfermedad es causada por el exceso de ácido o infección?",
+      "en": "Which disease is caused by excess acid or infection?"
+    },
+    "a": {"es": "Gastritis", "en": "Gastritis"},
+    "b": {"es": "Úlcera", "en": "Ulcer"},
+    "c": {"es": "Reflujo gástrico", "en": "Gastric reflux"},
+    "d": {"es": "Úlcera gástrica", "en": "Stomach ulcer"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál es una forma de cuidar el estómago?",
+      "en": "What is one way to take care of the stomach?"
+    },
+    "a": {"es": "Comer rápido y sin masticar", "en": "Eat fast without chewing"},
+    "b": {"es": "Beber refrescos en exceso", "en": "Drink too many sodas"},
+    "c": {"es": "Evitar comidas", "en": "Skip meals"},
+    "d": {"es": "Comer despacio y con calma", "en": "Eat slowly and calmly"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué cantidad de jugo gástrico produce el estómago por día?",
+      "en": "How much gastric juice does the stomach produce per day?"
+    },
+    "a": {"es": "500 ml", "en": "500 ml"},
+    "b": {"es": "1 litro", "en": "1 liter"},
+    "c": {"es": "2 litros", "en": "2 liters"},
+    "d": {"es": "3 litros", "en": "3 liters"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cómo se llama el sonido del estómago cuando tenemos hambre?",
+      "en": "What is the name of the stomach sound when we're hungry?"
+    },
+    "a": {"es": "Rugido gástrico", "en": "Gastric growl"},
+    "b": {"es": "Borborigmo", "en": "Borborygmus"},
+    "c": {"es": "Palpitación", "en": "Palpitation"},
+    "d": {"es": "Espasmo", "en": "Spasm"},
+    "respuesta": "b"
+  }
+]

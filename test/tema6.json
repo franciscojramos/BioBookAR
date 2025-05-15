@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal de los intestinos?",
+      "en": "What is the main function of the intestines?"
+    },
+    "a": {"es": "Producir bilis", "en": "Produce bile"},
+    "b": {"es": "Absorber nutrientes y eliminar desechos", "en": "Absorb nutrients and eliminate waste"},
+    "c": {"es": "Filtrar la sangre", "en": "Filter the blood"},
+    "d": {"es": "Bombear oxígeno", "en": "Pump oxygen"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál es más largo: el intestino delgado o el grueso?",
+      "en": "Which is longer: the small or the large intestine?"
+    },
+    "a": {"es": "El grueso", "en": "The large intestine"},
+    "b": {"es": "Ambos miden igual", "en": "They are the same length"},
+    "c": {"es": "El delgado", "en": "The small intestine"},
+    "d": {"es": "Ninguno", "en": "Neither"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte del intestino absorbe la mayoría de los nutrientes?",
+      "en": "Which part of the intestine absorbs most nutrients?"
+    },
+    "a": {"es": "Intestino grueso", "en": "Large intestine"},
+    "b": {"es": "Estómago", "en": "Stomach"},
+    "c": {"es": "Hígado", "en": "Liver"},
+    "d": {"es": "Intestino delgado", "en": "Small intestine"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué se forma en el intestino grueso?",
+      "en": "What is formed in the large intestine?"
+    },
+    "a": {"es": "Sangre", "en": "Blood"},
+    "b": {"es": "Bilirrubina", "en": "Bilirubin"},
+    "c": {"es": "Heces", "en": "Feces"},
+    "d": {"es": "Saliva", "en": "Saliva"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué órgano ayuda a la digestión junto con los intestinos?",
+      "en": "Which organ helps with digestion along with the intestines?"
+    },
+    "a": {"es": "Corazón", "en": "Heart"},
+    "b": {"es": "Hígado", "en": "Liver"},
+    "c": {"es": "Pulmones", "en": "Lungs"},
+    "d": {"es": "Cerebro", "en": "Brain"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué problema ocurre cuando el intestino no absorbe bien el agua?",
+      "en": "What happens when the intestine doesn't absorb water well?"
+    },
+    "a": {"es": "Estreñimiento", "en": "Constipation"},
+    "b": {"es": "Diarrea", "en": "Diarrhea"},
+    "c": {"es": "Apendicitis", "en": "Appendicitis"},
+    "d": {"es": "Indigestión", "en": "Indigestion"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte pequeña cerca del intestino grueso puede inflamarse?",
+      "en": "What small part near the large intestine can become inflamed?"
+    },
+    "a": {"es": "Páncreas", "en": "Pancreas"},
+    "b": {"es": "Apéndice", "en": "Appendix"},
+    "c": {"es": "Estómago", "en": "Stomach"},
+    "d": {"es": "Vesícula", "en": "Gallbladder"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué es bueno para cuidar los intestinos?",
+      "en": "What is good for taking care of the intestines?"
+    },
+    "a": {"es": "Evitar frutas", "en": "Avoid fruits"},
+    "b": {"es": "Beber poca agua", "en": "Drink little water"},
+    "c": {"es": "Comer alimentos con fibra", "en": "Eat fiber-rich foods"},
+    "d": {"es": "No lavarse las manos", "en": "Not washing hands"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué organismos pueden vivir en los intestinos y causar molestias?",
+      "en": "What organisms can live in the intestines and cause discomfort?"
+    },
+    "a": {"es": "Virus respiratorios", "en": "Respiratory viruses"},
+    "b": {"es": "Parásitos intestinales", "en": "Intestinal parasites"},
+    "c": {"es": "Bacterias de la piel", "en": "Skin bacteria"},
+    "d": {"es": "Hongos del oído", "en": "Ear fungi"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué ocurre con los nutrientes en el intestino delgado?",
+      "en": "What happens to nutrients in the small intestine?"
+    },
+    "a": {"es": "Se convierten en aire", "en": "They turn into air"},
+    "b": {"es": "Se eliminan como desechos", "en": "They are eliminated as waste"},
+    "c": {"es": "Se absorben hacia la sangre", "en": "They are absorbed into the blood"},
+    "d": {"es": "Se almacenan en el estómago", "en": "They are stored in the stomach"},
+    "respuesta": "c"
+  }
+]

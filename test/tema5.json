@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es una función principal del hígado?",
+      "en": "What is one main function of the liver?"
+    },
+    "a": {"es": "Bombear sangre", "en": "Pump blood"},
+    "b": {"es": "Filtrar la sangre", "en": "Filter the blood"},
+    "c": {"es": "Controlar los huesos", "en": "Control the bones"},
+    "d": {"es": "Respirar", "en": "Breathe"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Dónde está ubicado el hígado?",
+      "en": "Where is the liver located?"
+    },
+    "a": {"es": "En el tórax, junto al corazón", "en": "In the chest, next to the heart"},
+    "b": {"es": "En la parte inferior del abdomen", "en": "In the lower abdomen"},
+    "c": {"es": "En la parte superior derecha del abdomen", "en": "In the upper right abdomen"},
+    "d": {"es": "En el cuello", "en": "In the neck"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué líquido produce el hígado para ayudar a digerir las grasas?",
+      "en": "What liquid does the liver produce to help digest fats?"
+    },
+    "a": {"es": "Jugo gástrico", "en": "Gastric juice"},
+    "b": {"es": "Orina", "en": "Urine"},
+    "c": {"es": "Saliva", "en": "Saliva"},
+    "d": {"es": "Bilis", "en": "Bile"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Dónde se almacena la bilis producida por el hígado?",
+      "en": "Where is bile stored after being produced by the liver?"
+    },
+    "a": {"es": "Páncreas", "en": "Pancreas"},
+    "b": {"es": "Estómago", "en": "Stomach"},
+    "c": {"es": "Vesícula biliar", "en": "Gallbladder"},
+    "d": {"es": "Intestino grueso", "en": "Large intestine"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué almacena el hígado como reserva de energía?",
+      "en": "What does the liver store as an energy reserve?"
+    },
+    "a": {"es": "Calcio", "en": "Calcium"},
+    "b": {"es": "Grasa", "en": "Fat"},
+    "c": {"es": "Glucosa", "en": "Glucose"},
+    "d": {"es": "Proteínas", "en": "Proteins"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué enfermedad implica inflamación del hígado?",
+      "en": "Which disease involves inflammation of the liver?"
+    },
+    "a": {"es": "Cirrosis", "en": "Cirrhosis"},
+    "b": {"es": "Hepatitis", "en": "Hepatitis"},
+    "c": {"es": "Gastritis", "en": "Gastritis"},
+    "d": {"es": "Osteoporosis", "en": "Osteoporosis"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué problema ocurre cuando se acumula grasa en el hígado?",
+      "en": "What condition occurs when fat accumulates in the liver?"
+    },
+    "a": {"es": "Hígado graso", "en": "Fatty liver"},
+    "b": {"es": "Gastritis", "en": "Gastritis"},
+    "c": {"es": "Anemia", "en": "Anemia"},
+    "d": {"es": "Diabetes", "en": "Diabetes"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué hábito daña al hígado y puede causar cirrosis?",
+      "en": "Which habit damages the liver and can cause cirrhosis?"
+    },
+    "a": {"es": "Comer frutas", "en": "Eating fruits"},
+    "b": {"es": "Hacer ejercicio", "en": "Exercising"},
+    "c": {"es": "Beber alcohol", "en": "Drinking alcohol"},
+    "d": {"es": "Dormir bien", "en": "Sleeping well"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué órgano puede regenerarse si se corta una parte?",
+      "en": "Which organ can regenerate if part of it is removed?"
+    },
+    "a": {"es": "Corazón", "en": "Heart"},
+    "b": {"es": "Estómago", "en": "Stomach"},
+    "c": {"es": "Pulmón", "en": "Lung"},
+    "d": {"es": "Hígado", "en": "Liver"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué medida ayuda a cuidar el hígado?",
+      "en": "Which action helps take care of the liver?"
+    },
+    "a": {"es": "Tomar alcohol regularmente", "en": "Drink alcohol regularly"},
+    "b": {"es": "Evitar frutas y verduras", "en": "Avoid fruits and vegetables"},
+    "c": {"es": "Comer con mucha sal", "en": "Eat very salty food"},
+    "d": {"es": "Hacer ejercicio y beber agua", "en": "Exercise and drink water"},
+    "respuesta": "d"
+  }
+]

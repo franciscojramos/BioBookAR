@@ -23,7 +23,7 @@ def capturar_y_codificar_rostro():
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         cv2.imshow("Captura de rostro", frame)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):# Presionar 'q' para capturar
             # Tomar imagen actual y cerrar
             rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             caras = face_recognition.face_locations(rgb_frame)
@@ -36,7 +36,7 @@ def capturar_y_codificar_rostro():
             break
 
     video.release()
-    cv2.destroyAllWindows()
+    cv2.destroyAllWindows() # Cerrar ventana de captura
     return encoding_resultado
 
 def comparar_encoding_con_base(encoding_nuevo, lista_encodings_guardados, tolerancia=0.5):

@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal del cerebro?",
+      "en": "What is the main function of the brain?"
+    },
+    "a": {"es": "Bombear sangre", "en": "Pump blood"},
+    "b": {"es": "Filtrar desechos", "en": "Filter waste"},
+    "c": {"es": "Controlar funciones corporales y mentales", "en": "Control body and mental functions"},
+    "d": {"es": "Regular la digestión", "en": "Regulate digestion"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte del cerebro controla el equilibrio y la coordinación?",
+      "en": "Which part of the brain controls balance and coordination?"
+    },
+    "a": {"es": "Tronco encefálico", "en": "Brainstem"},
+    "b": {"es": "Cerebro", "en": "Cerebrum"},
+    "c": {"es": "Cerebelo", "en": "Cerebellum"},
+    "d": {"es": "Hipotálamo", "en": "Hypothalamus"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué estructura conecta el cerebro con la médula espinal?",
+      "en": "What structure connects the brain to the spinal cord?"
+    },
+    "a": {"es": "Cerebelo", "en": "Cerebellum"},
+    "b": {"es": "Tronco encefálico", "en": "Brainstem"},
+    "c": {"es": "Hemisferio derecho", "en": "Right hemisphere"},
+    "d": {"es": "Lóbulo frontal", "en": "Frontal lobe"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué hemisferio cerebral se asocia con el lenguaje y las matemáticas?",
+      "en": "Which brain hemisphere is associated with language and math?"
+    },
+    "a": {"es": "Izquierdo", "en": "Left"},
+    "b": {"es": "Derecho", "en": "Right"},
+    "c": {"es": "Central", "en": "Central"},
+    "d": {"es": "Posterior", "en": "Posterior"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué tipo de célula permite la transmisión de información en el cerebro?",
+      "en": "What type of cell allows information transmission in the brain?"
+    },
+    "a": {"es": "Glóbulo rojo", "en": "Red blood cell"},
+    "b": {"es": "Plaqueta", "en": "Platelet"},
+    "c": {"es": "Neurona", "en": "Neuron"},
+    "d": {"es": "Célula epitelial", "en": "Epithelial cell"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál de estas actividades ayuda a cuidar el cerebro?",
+      "en": "Which of these activities helps take care of the brain?"
+    },
+    "a": {"es": "Dormir mal", "en": "Sleeping poorly"},
+    "b": {"es": "Fumar", "en": "Smoking"},
+    "c": {"es": "Leer y aprender cosas nuevas", "en": "Reading and learning new things"},
+    "d": {"es": "Evitar el ejercicio", "en": "Avoiding exercise"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué enfermedad afecta la memoria y el pensamiento?",
+      "en": "Which disease affects memory and thinking?"
+    },
+    "a": {"es": "Epilepsia", "en": "Epilepsy"},
+    "b": {"es": "Traumatismo craneal", "en": "Head injury"},
+    "c": {"es": "Alzhéimer", "en": "Alzheimer's"},
+    "d": {"es": "Migraña", "en": "Migraine"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte del cerebro regula funciones como la respiración y el latido del corazón?",
+      "en": "Which part of the brain regulates functions like breathing and heartbeat?"
+    },
+    "a": {"es": "Corteza cerebral", "en": "Cerebral cortex"},
+    "b": {"es": "Cerebelo", "en": "Cerebellum"},
+    "c": {"es": "Tronco encefálico", "en": "Brainstem"},
+    "d": {"es": "Hipocampo", "en": "Hippocampus"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuántas neuronas aproximadamente tiene el cerebro humano?",
+      "en": "Approximately how many neurons does the human brain have?"
+    },
+    "a": {"es": "1 millón", "en": "1 million"},
+    "b": {"es": "100 millones", "en": "100 million"},
+    "c": {"es": "1.000 millones", "en": "1 billion"},
+    "d": {"es": "86.000 millones", "en": "86 billion"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué lado del cuerpo controla el hemisferio izquierdo del cerebro?",
+      "en": "Which side of the body is controlled by the brain's left hemisphere?"
+    },
+    "a": {"es": "Izquierdo", "en": "Left"},
+    "b": {"es": "Derecho", "en": "Right"},
+    "c": {"es": "Ambos lados", "en": "Both sides"},
+    "d": {"es": "Ninguno", "en": "Neither"},
+    "respuesta": "b"
+  }
+]

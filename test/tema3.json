@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es una función principal del esqueleto humano?",
+      "en": "What is a main function of the human skeleton?"
+    },
+    "a": {"es": "Producir oxígeno", "en": "Produce oxygen"},
+    "b": {"es": "Filtrar la sangre", "en": "Filter the blood"},
+    "c": {"es": "Dar forma y permitir movimiento", "en": "Give shape and allow movement"},
+    "d": {"es": "Digestionar alimentos", "en": "Digest food"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuántos huesos tiene un adulto en promedio?",
+      "en": "How many bones does an adult have on average?"
+    },
+    "a": {"es": "270", "en": "270"},
+    "b": {"es": "300", "en": "300"},
+    "c": {"es": "206", "en": "206"},
+    "d": {"es": "180", "en": "180"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué hueso protege el cerebro?",
+      "en": "Which bone protects the brain?"
+    },
+    "a": {"es": "Fémur", "en": "Femur"},
+    "b": {"es": "Costillas", "en": "Ribs"},
+    "c": {"es": "Cráneo", "en": "Skull"},
+    "d": {"es": "Vértebra", "en": "Vertebra"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Dónde se produce la sangre en el cuerpo?",
+      "en": "Where is blood produced in the body?"
+    },
+    "a": {"es": "En los pulmones", "en": "In the lungs"},
+    "b": {"es": "En la médula ósea", "en": "In the bone marrow"},
+    "c": {"es": "En el corazón", "en": "In the heart"},
+    "d": {"es": "En el hígado", "en": "In the liver"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué tipo de hueso es el fémur?",
+      "en": "What type of bone is the femur?"
+    },
+    "a": {"es": "Corto", "en": "Short"},
+    "b": {"es": "Plano", "en": "Flat"},
+    "c": {"es": "Irregular", "en": "Irregular"},
+    "d": {"es": "Largo", "en": "Long"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué articulación permite flexionar el codo?",
+      "en": "Which joint allows you to bend the elbow?"
+    },
+    "a": {"es": "Bisagra", "en": "Hinge"},
+    "b": {"es": "Deslizante", "en": "Gliding"},
+    "c": {"es": "Esférica", "en": "Ball-and-socket"},
+    "d": {"es": "Fija", "en": "Fixed"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué mineral se almacena en los huesos?",
+      "en": "Which mineral is stored in bones?"
+    },
+    "a": {"es": "Hierro", "en": "Iron"},
+    "b": {"es": "Calcio", "en": "Calcium"},
+    "c": {"es": "Potasio", "en": "Potassium"},
+    "d": {"es": "Sodio", "en": "Sodium"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué enfermedad debilita los huesos y los vuelve frágiles?",
+      "en": "Which disease weakens bones and makes them fragile?"
+    },
+    "a": {"es": "Fractura", "en": "Fracture"},
+    "b": {"es": "Osteoporosis", "en": "Osteoporosis"},
+    "c": {"es": "Escoliosis", "en": "Scoliosis"},
+    "d": {"es": "Artritis", "en": "Arthritis"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál es el hueso más pequeño del cuerpo humano?",
+      "en": "What is the smallest bone in the human body?"
+    },
+    "a": {"es": "Fémur", "en": "Femur"},
+    "b": {"es": "Vértebra", "en": "Vertebra"},
+    "c": {"es": "Estribo", "en": "Stapes"},
+    "d": {"es": "Húmero", "en": "Humerus"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué hábito ayuda a fortalecer los huesos?",
+      "en": "Which habit helps strengthen bones?"
+    },
+    "a": {"es": "Fumar", "en": "Smoking"},
+    "b": {"es": "Comer dulces", "en": "Eating sweets"},
+    "c": {"es": "Ejercicio físico regular", "en": "Regular physical exercise"},
+    "d": {"es": "Dormir poco", "en": "Sleeping little"},
+    "respuesta": "c"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal del sistema respiratorio?",
+      "en": "What is the main function of the respiratory system?"
+    },
+    "a": {"es": "Transportar sangre", "en": "Transport blood"},
+    "b": {"es": "Digestionar alimentos", "en": "Digest food"},
+    "c": {"es": "Llevar oxígeno y eliminar dióxido de carbono", "en": "Bring oxygen and remove carbon dioxide"},
+    "d": {"es": "Producir energía", "en": "Produce energy"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Por dónde entra el aire al cuerpo?",
+      "en": "Where does air enter the body?"
+    },
+    "a": {"es": "Por el esófago", "en": "Through the esophagus"},
+    "b": {"es": "Por la nariz y la boca", "en": "Through the nose and mouth"},
+    "c": {"es": "Por los oídos", "en": "Through the ears"},
+    "d": {"es": "Por la piel", "en": "Through the skin"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Dónde ocurre el intercambio de gases en los pulmones?",
+      "en": "Where does gas exchange occur in the lungs?"
+    },
+    "a": {"es": "En los bronquios", "en": "In the bronchi"},
+    "b": {"es": "En los alvéolos", "en": "In the alveoli"},
+    "c": {"es": "En la tráquea", "en": "In the trachea"},
+    "d": {"es": "En la faringe", "en": "In the pharynx"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué estructura lleva el aire desde la garganta hasta los pulmones?",
+      "en": "Which structure carries air from the throat to the lungs?"
+    },
+    "a": {"es": "Esófago", "en": "Esophagus"},
+    "b": {"es": "Intestino", "en": "Intestine"},
+    "c": {"es": "Tráquea", "en": "Trachea"},
+    "d": {"es": "Diafragma", "en": "Diaphragm"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte del sistema respiratorio contiene las cuerdas vocales?",
+      "en": "Which part of the respiratory system contains the vocal cords?"
+    },
+    "a": {"es": "Faringe", "en": "Pharynx"},
+    "b": {"es": "Tráquea", "en": "Trachea"},
+    "c": {"es": "Laringe", "en": "Larynx"},
+    "d": {"es": "Bronquios", "en": "Bronchi"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué ocurre cuando inhalamos?",
+      "en": "What happens when we inhale?"
+    },
+    "a": {"es": "El aire sale del cuerpo", "en": "Air leaves the body"},
+    "b": {"es": "Los pulmones se contraen", "en": "The lungs contract"},
+    "c": {"es": "Los pulmones se expanden y entra oxígeno", "en": "The lungs expand and oxygen enters"},
+    "d": {"es": "El corazón deja de latir", "en": "The heart stops beating"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué enfermedad inflama los bronquios y dificulta la respiración?",
+      "en": "Which disease inflames the bronchi and makes breathing difficult?"
+    },
+    "a": {"es": "Gripe", "en": "Flu"},
+    "b": {"es": "Bronquitis", "en": "Bronchitis"},
+    "c": {"es": "Apendicitis", "en": "Appendicitis"},
+    "d": {"es": "Fractura", "en": "Fracture"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué hábito daña el sistema respiratorio?",
+      "en": "What habit harms the respiratory system?"
+    },
+    "a": {"es": "Beber agua", "en": "Drinking water"},
+    "b": {"es": "Dormir bien", "en": "Sleeping well"},
+    "c": {"es": "Fumar", "en": "Smoking"},
+    "d": {"es": "Hacer ejercicio", "en": "Exercising"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué órgano es más grande: pulmón derecho o izquierdo?",
+      "en": "Which lung is larger: right or left?"
+    },
+    "a": {"es": "Izquierdo", "en": "Left"},
+    "b": {"es": "Derecho", "en": "Right"},
+    "c": {"es": "Son iguales", "en": "They are equal"},
+    "d": {"es": "Depende de la edad", "en": "Depends on age"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué velocidad puede alcanzar un estornudo?",
+      "en": "What speed can a sneeze reach?"
+    },
+    "a": {"es": "40 km/h", "en": "40 km/h"},
+    "b": {"es": "80 km/h", "en": "80 km/h"},
+    "c": {"es": "100 km/h", "en": "100 km/h"},
+    "d": {"es": "160 km/h", "en": "160 km/h"},
+    "respuesta": "d"
+  }
+]

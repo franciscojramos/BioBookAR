@@ -4,18 +4,24 @@ from PIL import Image, ImageTk
 from base_datos import db
 from reconocimiento import facial
 
+# Asegúrate de que las tablas existen
+
 db.crear_tablas()
 
 class LoginApp:
     def __init__(self, root):
         self.root = root
+        icono_img = Image.open("recursos/logof2.ico")
+        self.icono_tk = ImageTk.PhotoImage(icono_img)
+        self.root.iconphoto(False, self.icono_tk)
+
         self.root.title("BioBookAR")
         self.root.geometry("400x300")
         self.root.configure(bg="white")  # Fondo blanco
 
         # Cargar logo y colocarlo en esquina superior izquierda
-        logo_path = "recursos/logof2.png"  # Asegúrate de tenerlo como .png
-        image = Image.open(logo_path).resize((60, 60))
+        logo_path = "recursos/logof2.png"  
+        image = Image.open(logo_path).resize((60, 60)) # Cambia el tamaño al necesario
         self.logo_tk = ImageTk.PhotoImage(image)
         self.logo_label = tk.Label(self.root, image=self.logo_tk, bg="white", borderwidth=0)
         self.logo_label.place(x=10, y=10)
@@ -136,7 +142,15 @@ class LoginApp:
         rol = user[4]
         nombre = user[1]
         messagebox.showinfo("Bienvenido", f"Hola, {nombre} ({rol})", parent=self.root)
-        self.root.destroy()
+
+        if rol == "alumno":
+            from gui.alumno import alumno
+            alumno.abrir_ventana(user, self.root)
+        elif rol == "profesor":
+            from gui.profesor import profesor
+            profesor.abrir_ventana(user, self.root)
+
+
         # Aquí se redirigiría a gui.alumno o gui.profesor
 
 if __name__ == "__main__":

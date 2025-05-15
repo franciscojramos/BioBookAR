@@ -1,0 +1,112 @@
+[
+  {
+    "pregunta": {
+      "es": "¿Cuál es la función principal del aparato circulatorio?",
+      "en": "What is the main function of the circulatory system?"
+    },
+    "a": {"es": "Transportar sangre y nutrientes", "en": "Transport blood and nutrients"},
+    "b": {"es": "Producir hormonas", "en": "Produce hormones"},
+    "c": {"es": "Eliminar desechos sólidos", "en": "Eliminate solid waste"},
+    "d": {"es": "Regular la temperatura", "en": "Regulate temperature"},
+    "respuesta": "a"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál de los siguientes no es un tipo de vaso sanguíneo?",
+      "en": "Which of the following is not a type of blood vessel?"
+    },
+    "a": {"es": "Arteria", "en": "Artery"},
+    "b": {"es": "Vena", "en": "Vein"},
+    "c": {"es": "Capilar", "en": "Capillary"},
+    "d": {"es": "Nódulo", "en": "Node"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué estructura permite el intercambio de gases entre la sangre y las células?",
+      "en": "Which structure allows gas exchange between blood and cells?"
+    },
+    "a": {"es": "Venas", "en": "Veins"},
+    "b": {"es": "Capilares", "en": "Capillaries"},
+    "c": {"es": "Aurículas", "en": "Atria"},
+    "d": {"es": "Arterias", "en": "Arteries"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué componente de la sangre transporta oxígeno?",
+      "en": "Which component of blood transports oxygen?"
+    },
+    "a": {"es": "Glóbulos blancos", "en": "White blood cells"},
+    "b": {"es": "Plaquetas", "en": "Platelets"},
+    "c": {"es": "Glóbulos rojos", "en": "Red blood cells"},
+    "d": {"es": "Plasma", "en": "Plasma"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué cavidades del corazón reciben la sangre?",
+      "en": "Which heart chambers receive blood?"
+    },
+    "a": {"es": "Ventrículos", "en": "Ventricles"},
+    "b": {"es": "Aurículas", "en": "Atria"},
+    "c": {"es": "Arterias", "en": "Arteries"},
+    "d": {"es": "Capilares", "en": "Capillaries"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué ocurre durante la circulación pulmonar?",
+      "en": "What happens during pulmonary circulation?"
+    },
+    "a": {"es": "La sangre se distribuye al cuerpo", "en": "Blood is distributed to the body"},
+    "b": {"es": "Se produce la digestión", "en": "Digestion occurs"},
+    "c": {"es": "La sangre se oxigena en los pulmones", "en": "Blood is oxygenated in the lungs"},
+    "d": {"es": "El corazón se relaja completamente", "en": "The heart fully relaxes"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué trastorno ocurre cuando una arteria se obstruye y el corazón no recibe oxígeno?",
+      "en": "What condition occurs when an artery is blocked and the heart doesn't receive oxygen?"
+    },
+    "a": {"es": "Hipertensión", "en": "Hypertension"},
+    "b": {"es": "Infarto de miocardio", "en": "Heart attack"},
+    "c": {"es": "Accidente cerebrovascular", "en": "Stroke"},
+    "d": {"es": "Anemia", "en": "Anemia"},
+    "respuesta": "b"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué medida ayuda a mantener sano el sistema circulatorio?",
+      "en": "What helps maintain a healthy circulatory system?"
+    },
+    "a": {"es": "Comer mucha azúcar", "en": "Eating a lot of sugar"},
+    "b": {"es": "Evitar el ejercicio", "en": "Avoiding exercise"},
+    "c": {"es": "Fumar tabaco", "en": "Smoking tobacco"},
+    "d": {"es": "Hacer ejercicio regularmente", "en": "Exercising regularly"},
+    "respuesta": "d"
+  },
+  {
+    "pregunta": {
+      "es": "¿Qué parte de la sangre ayuda a la coagulación?",
+      "en": "Which part of the blood helps with clotting?"
+    },
+    "a": {"es": "Glóbulos rojos", "en": "Red blood cells"},
+    "b": {"es": "Glóbulos blancos", "en": "White blood cells"},
+    "c": {"es": "Plaquetas", "en": "Platelets"},
+    "d": {"es": "Plasma", "en": "Plasma"},
+    "respuesta": "c"
+  },
+  {
+    "pregunta": {
+      "es": "¿Cuál es el promedio de latidos del corazón por día?",
+      "en": "What is the average number of heartbeats per day?"
+    },
+    "a": {"es": "10.000", "en": "10,000"},
+    "b": {"es": "50.000", "en": "50,000"},
+    "c": {"es": "100.000", "en": "100,000"},
+    "d": {"es": "500.000", "en": "500,000"},
+    "respuesta": "c"
+  }
+]
