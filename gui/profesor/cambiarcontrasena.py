@@ -3,7 +3,11 @@ from tkinter import simpledialog, messagebox
 from base_datos import db
 
 def cambiar_contraseña(user, root, forzado=False):
+    nuevo_usuario = None  # variable a devolver
+
     def guardar():
+        nonlocal nuevo_usuario
+
         nueva = entry_nueva.get()
         confirmar = entry_confirmar.get()
 
@@ -19,11 +23,14 @@ def cambiar_contraseña(user, root, forzado=False):
             messagebox.showwarning("Contraseña insegura", "Elige una contraseña distinta a 'admin'.")
             return
 
-        db.conn = db.conectar()
-        cursor = db.conn.cursor()
+        conn = db.conectar()
+        cursor = conn.cursor()
         cursor.execute("UPDATE usuarios SET contraseña = ? WHERE id = ?", (nueva, user[0]))
-        db.conn.commit()
-        db.conn.close()
+        conn.commit()
+        conn.close()
+
+        # 🔄 Recargar el usuario actualizado
+        nuevo_usuario = db.obtener_usuario_por_credenciales(user[2], nueva)
 
         messagebox.showinfo("Contraseña cambiada", "✅ Contraseña actualizada correctamente.")
         ventana.destroy()
@@ -35,7 +42,7 @@ def cambiar_contraseña(user, root, forzado=False):
     ventana.grab_set()
 
     if forzado:
-        ventana.protocol("WM_DELETE_WINDOW", lambda: None)  # Evitar que se cierre
+        ventana.protocol("WM_DELETE_WINDOW", lambda: None)  # Bloquea cierre sin cambio
         label_info = "🔐 Es obligatorio cambiar la contraseña de administrador"
     else:
         label_info = "Introduce la nueva contraseña"
@@ -53,4 +60,6 @@ def cambiar_contraseña(user, root, forzado=False):
     tk.Button(ventana, text="Guardar", command=guardar).pack(pady=15)
 
     if forzado:
-        ventana.wait_window()  # Espera a que se cierre para seguir
+        ventana.wait_window()
+
+    return nuevo_usuario if nuevo_usuario else user  # si no cambió nada, se devuelve el original
