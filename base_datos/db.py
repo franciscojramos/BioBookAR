@@ -47,7 +47,15 @@ def crear_tablas():
         FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
     );
     ''')
-    
+
+    # Crear usuario admin si no existe
+    cursor.execute("SELECT * FROM usuarios WHERE usuario = 'admin'")
+    if cursor.fetchone() is None:
+        cursor.execute('''
+            INSERT INTO usuarios (nombre, usuario, contraseña, rol, encoding, idioma)
+            VALUES (?, ?, ?, ?, ?, ?)
+        ''', ('Administrador', 'admin', 'admin', 'profesor', None, 'es'))
+
     conn.commit()
     conn.close()
 
