@@ -3,7 +3,7 @@ from tkinter import messagebox
 from base_datos import db
 
 from gui.profesor.veralumnos import mostrar_lista_alumnos
-#from gui.profesor.editarpreguntas import mostrar_editor_preguntas
+from gui.profesor.editarpreguntas import mostrar_editor_preguntas
 from gui.profesor.estadisticas import mostrar_estadisticas
 from gui.profesor.cambiarcontrasena import cambiar_contraseña
 
@@ -38,6 +38,6 @@ def abrir_ventana(user, root):
 
     # Botones de acción
     tk.Button(root, text="👥 Ver Alumnos", width=25, command=lambda: mostrar_lista_alumnos(root, user)).pack(pady=10)
-    tk.Button(root, text="📝 Editar Preguntas", width=25, command=lambda: mostrar_editor_preguntas(root)).pack(pady=10)
+    tk.Button(root, text="📝 Editar Preguntas", width=25, command=lambda: mostrar_editor_preguntas(root, user)).pack(pady=10)
     tk.Button(root, text="📊 Ver Estadísticas", width=25, command=lambda: mostrar_estadisticas(root, user)).pack(pady=10)
     tk.Button(root, text="🔒 Cerrar sesión", width=25, command=lambda: cerrar_sesion(root)).pack(pady=30)
