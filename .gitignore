@@ -8,3 +8,5 @@ __pycache__/
 *.pkl
 .env
 kisko_temas.py
+pruebas.py
+*.mp4

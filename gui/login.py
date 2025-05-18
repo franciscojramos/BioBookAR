@@ -113,22 +113,44 @@ class LoginApp:
             messagebox.showwarning("Error", "Reconocimiento facial fallido. Intente con usuario y contraseña.", parent=self.root)
 
     def registrar_usuario(self):
-        nombre = self.nombre_entry.get()
-        usuario = self.usuario_reg.get()
-        contraseña = self.contraseña_reg.get()
+        nombre = self.nombre_entry.get().strip()
+        usuario = self.usuario_reg.get().strip()
+        contraseña = self.contraseña_reg.get().strip()
         idioma = self.idioma_var.get()
 
+        # Validar campos vacíos
+        if not nombre or not usuario or not contraseña:
+            messagebox.showwarning("Campos vacíos", "Debes completar todos los campos: nombre, usuario y contraseña.", parent=self.root)
+            return
+
+        # Captura facial
         encoding = facial.capturar_y_codificar_rostro()
         if encoding is None:
             messagebox.showwarning("Error", "No se detectó un rostro válido", parent=self.root)
             return
 
+        # Obtener encodings existentes
+        encodings_guardados = db.obtener_todos_los_encodings()
+
+        # Comprobar si el rostro ya está registrado
+        usuario_existente = facial.comparar_encoding_con_base(encoding, encodings_guardados)
+
+        if usuario_existente is not None:
+            messagebox.showerror("Error de Registro", 
+                                "Este rostro ya está registrado en el sistema. "
+                                "Por favor, inicia sesión o contacta con el administrador.", 
+                                parent=self.root)
+            return
+
+        # Proceder al registro si no existe coincidencia
         exito = db.insertar_usuario(nombre, usuario, contraseña, "alumno", encoding, idioma)
         if exito:
             messagebox.showinfo("Éxito", "Usuario registrado correctamente", parent=self.root)
             self.mostrar_pantalla_inicio()
         else:
             messagebox.showerror("Error", "Ese nombre de usuario ya existe", parent=self.root)
+
+
 
     def obtener_usuario_por_id(self, usuario_id):
         conn = db.conectar()

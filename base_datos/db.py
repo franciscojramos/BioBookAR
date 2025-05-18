@@ -118,6 +118,7 @@ def obtener_idioma_usuario(usuario_id):
 
 def marcar_tema_como_visto(usuario_id, tema):
     """Marca un tema como 'visto' por un usuario (tras escanear AR)."""
+    tema = int(tema) # Asegurarse de que el tema es un número entero
     conn = conectar()
     cursor = conn.cursor()
     try:

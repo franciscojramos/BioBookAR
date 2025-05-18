@@ -3,6 +3,7 @@ from tkinter import messagebox
 from base_datos import db
 from gui.alumno.misnotas import ver_notas
 from gui.alumno.realizartest import realizar_test
+from gui.alumno.AR import ARventana 
 
 
 
@@ -45,7 +46,7 @@ def abrir_ventana(user,root):
     # Botones de acción
     tk.Button(root, text="📊 Mis Notas", width=20, command=lambda: ver_notas(alumno_id, root, user)).pack(pady=10)
     tk.Button(root, text="🧪 Realizar Test", width=20,command=lambda: realizar_test(alumno_id, root, user)).pack(pady=10)
-    tk.Button(root, text="🧬 Iniciar Realidad Aumentada", width=25).pack(pady=10)
+    tk.Button(root, text="🧬 Iniciar Realidad Aumentada", width=25,command=lambda: ARventana(root, alumno_id, user)).pack(pady=10)
     tk.Button(root, text="🌐 Cambiar idioma", bg="#DDDDDD", command=lambda: cambiar_idioma(user)).pack(pady=10)
     tk.Button(root, text="🔒 Cerrar sesión", width=20, command=lambda: cerrar_sesion(root)).pack(pady=30)
 

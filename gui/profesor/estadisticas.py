@@ -12,13 +12,23 @@ def mostrar_estadisticas(root, user):
 
     tk.Label(root, text="📈 Rendimiento Global por Tema", font=("Helvetica", 14, "bold")).pack(pady=10)
 
+        # Tabla de estadísticas con scroll horizontal
+    frame_tabla = tk.Frame(root)
+    frame_tabla.pack(padx=20, pady=10, fill="both", expand=True)
+
     columnas = ("tema", "media", "max", "min", "alumnos")
-    tabla = ttk.Treeview(root, columns=columnas, show="headings", height=10)
-    tabla.pack(padx=20, pady=10, fill="both", expand=True)
+    tabla = ttk.Treeview(frame_tabla, columns=columnas, show="headings", height=10)
+    tabla.pack(side="top", fill="both", expand=True)
+
+    scroll_x = ttk.Scrollbar(frame_tabla, orient="horizontal", command=tabla.xview)
+    scroll_x.pack(side="bottom", fill="x")
+
+    tabla.configure(xscrollcommand=scroll_x.set)
 
     for col in columnas:
         tabla.heading(col, text=col.capitalize())
         tabla.column(col, anchor="center")
+
 
     conn = conectar()
     cursor = conn.cursor()
