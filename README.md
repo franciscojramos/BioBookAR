@@ -106,6 +106,10 @@ BioBookAR/
 ├── recursos/
 │   ├── logof2.ico
 │   ├── logof2.png
+│   ├── imagenes/
+│   │   ├── rostro_correcto.png
+│   │   ├── rostro_neutro.png
+│   │   └── rostro_invalido.png
 │   └── videos/                        # Videos didácticos vinculados a marcadores ARUCO. No se refleja en el Git , pero debe tener estructura tema1.mp4 , tema2.mp4...
 └── README.md                          # Descripción técnica del proyecto.
 ```
