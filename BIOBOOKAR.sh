@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Instalando dependencias necesarias para BioBookAR..."
+echo "Bienvenido a BIOBOOKAR .....Instalando dependencias necesarias para BioBookAR..."
 
 # Asegura que pip esté actualizado
 python3 -m pip install --upgrade pip
