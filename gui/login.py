@@ -7,7 +7,7 @@ import threading
 import speech_recognition as sr
 
 
-# Asegúrate de que las tablas existen
+# Asegurarse de que la base de datos y las tablas estén creadas
 
 db.crear_tablas()
 
@@ -20,7 +20,7 @@ class LoginApp:
 
         self.root.title("BioBookAR")
         self.root.geometry("400x300")
-        self.root.configure(bg="white")  # Fondo blanco
+        self.root.configure(bg="white")  
 
         # Cargar logo y colocarlo en esquina superior izquierda
         logo_path = "recursos/logof2.png"  
@@ -232,7 +232,7 @@ class LoginApp:
                             self.mostrar_registro()
                             break
                     except:
-                        continue  # ignorar errores silenciosamente y seguir escuchando
+                        continue  # ignorar si no es ningun caso y seguir escuchando
 
         threading.Thread(target=bucle_voz, daemon=True).start()
 
