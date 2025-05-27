@@ -14,28 +14,43 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
 - Iniciar sesión mediante usuario o reconocimiento facial.
 
 ---
+## Página pricipal
 
+- Tienes dos opciones o Iniciar Sesión ó Crear nuevo usuario
+- Puedes entrar en cualquiera de los dos mediante reconocimiento de voz:
+
+- Iniciar Sesión:
+  - Puedes iniciar sesión mediante reconocimiento facial automático ó introduciendo usuario y contraseña
+  - Hay 3 estados : Cara reconocida (verde, inicia sesión) , cara no reconocida o fallo (roja , falla si hay 2 caras o existe algun fallo) , sin cara (gris).
+  -Control de errores, contraseña ó usuario incorrecto (Credenciales incorrectas)
+
+- Crear usuario:
+  - Reconoce automáticamente el rostro.
+  - Introduces tus datos y si prefieres los test en Inglés o en Español
+  - Control de errores , si la cara ya está registrada , si el nombre de usuario también
+ 
 ## 👤 Roles del Sistema
 
 ### 👨‍🏫 Profesor (rol único)
 
 - Usuario por defecto: `admin / admin`.
 - Al iniciar por primera vez, debe cambiar la contraseña.
+-Solo se inicia sesión por usuario y contraseña.
 - Accede a:
   - Lista de alumnos, estadísticas básicas y posibilidad de eliminar alumno.
   - Edición avanzada de preguntas de test por tema.
-  - Visualización detallada del rendimiento global y estadísticas de los alumnos.
+  - Visualización detallada del rendimiento global y estadísticas de los alumnos.Si pulsas en cualquier tema se abre la distribución de notas.
+  - Cerrar sesión.
 
 ### 👨‍🎓 Alumnos
 
 - Se registran con nombre, usuario, contraseña y captura facial.
 - No pueden registrarse con un nombre de usuario ya existente ni con un rostro ya registrado previamente.
-- Inician sesión mediante usuario o reconocimiento facial (con fallback en caso de error).
-- Acceden a:
+- Inician sesión mediante usuario o reconocimiento facial:
   - “Mis notas”: ver notas por tema, intentos, mejor nota y media.
   - “Realizar test”: por voz o manualmente, repetirlos según disponibilidad.
   - “Iniciar AR”: escanear marcadores ARUCO y ver videos educativos relacionados con el tema, desbloqueando los test de cada tema correspondiente.
-  - Cambio de idioma (ES/EN) de los test.
+  - Cambio de idioma (ES/EN) de los test.Para hacerlo efectivo , debe cerrar sesion y volver a iniciar.
 
 ---
 
@@ -57,7 +72,7 @@ BioBookAR busca transformar la forma en que los estudiantes de secundaria aprend
 
 ```plaintext
 BioBookAR/
-├── main.py                            # Punto de entrada principal.
+├── main.py                            # Programa inicial.
 ├── BIOBOOKAR.sh                       # Script de instalación y ejecución automática.
 ├── gui/                               # Interfaces gráficas con Tkinter.
 │   ├── login.py                       # Login + Registro de usuarios.
@@ -76,7 +91,7 @@ BioBookAR/
 │   └── facial.py                      # Captura y verificación de rostros con OpenCV.
 ├── base_datos/
 │   ├── db.py                          # Funciones CRUD: usuarios, resultados, estadísticas.
-│   └── biobookar.db                   # Base de datos.
+│   └── biobookar.db                   # Base de datos (se crea al iniciar).
 ├── realidad_aumentada/
 │   └── detector.py                    # Escaneo de marcadores y reproducción de video.
 ├── test/
@@ -91,7 +106,7 @@ BioBookAR/
 ├── recursos/
 │   ├── logof2.ico
 │   ├── logof2.png
-│   └── videos/                        # Videos didácticos vinculados a marcadores ARUCO.
+│   └── videos/                        # Videos didácticos vinculados a marcadores ARUCO. No se refleja en el Git , pero debe tener estructura tema1.mp4 , tema2.mp4...
 └── README.md                          # Descripción técnica del proyecto.
 ```
 
@@ -102,9 +117,11 @@ BioBookAR/
 - Autor: Francisco José Ramos Moya.
 - Universidad: Universidad de Granada, España.
 - Asignatura: Curso de Interfaces de Usuario Avanzadas (CUIA).
+- Profesor: Antonio Bautista Bailón Morillas.
 
 ---
 
 Además, el proyecto incluye un script `BIOBOOKAR.sh` que instala automáticamente las dependencias necesarias y ejecuta la aplicación.
-
+reset_admin.sh para borrarlo si necesita crear uno nuevo.
+ 
 ---

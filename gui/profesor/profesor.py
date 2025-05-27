@@ -34,7 +34,7 @@ def abrir_ventana(user, root):
 
 
     # Cabecera
-    tk.Label(root, text=f"👨‍🏫 Bienvenido, {nombre}", font=("Helvetica", 14, "bold"), bg="white").pack(pady=20)
+    tk.Label(root, text=f"Bienvenido, {nombre}", font=("Helvetica", 14, "bold"), bg="white").pack(pady=20)
 
     # Botones de acción
     tk.Button(root, text="👥 Ver Alumnos", width=25, command=lambda: mostrar_lista_alumnos(root, user)).pack(pady=10)
