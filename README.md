@@ -1,6 +1,6 @@
 # 📘 BioBookAR
 
-**BioBookAR** es una aplicación educativa interactiva desarrollada como proyecto académico para la asignatura de **CUIA** (Curso de Interfaces de Usuario Avanzadas) en la **Universidad de Granada, España**. Diseñada por **Francisco José Ramos Moya**, estudiante del **Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas (ADE)**, esta aplicación ofrece una experiencia innovadora para el aprendizaje del cuerpo humano mediante el uso de tecnologías como realidad aumentada, reconocimiento facial y procesamiento de lenguaje natural.
+**BioBookAR** es una aplicación educativa interactiva desarrollada como proyecto académico para la asignatura de **CUIA** (Cumputación Ubicua e Inteligencia Ambiental) en la **Universidad de Granada, España calificada con un 10**. Diseñada por **Francisco José Ramos Moya**, estudiante del **Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas (ADE)**, esta aplicación ofrece una experiencia innovadora para el aprendizaje del cuerpo humano mediante el uso de tecnologías como realidad aumentada, reconocimiento facial y procesamiento de lenguaje natural.
 
 ---
 
